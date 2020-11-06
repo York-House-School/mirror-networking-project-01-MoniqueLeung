@@ -1,0 +1,6 @@
+psd.iso filter=lfs diff=lfs merge=lfs -text
+*.iso filter=lfs diff=lfs merge=lfs -text
+.iso filter=lfs diff=lfs merge=lfs -text
+ClearSky.psd.iso filter=lfs diff=lfs merge=lfs -text
+ClearSky.psd filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
