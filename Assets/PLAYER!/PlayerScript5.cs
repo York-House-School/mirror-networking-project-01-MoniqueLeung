@@ -32,13 +32,16 @@ public class PlayerScript5 : NetworkBehaviour
       controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
 			rb = GetComponent <Rigidbody>();
+      camera = GetComponent<Camera>();
 
     }
 
 
-void MomoPlayerMovement(){
+void MomoPlayerMovement()
+{
 
-  if(isLocalPlayer){
+  if(isLocalPlayer)
+  {
     rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X") * MouseSensitivity, 0)));
     rb.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * speed ) + (transform.right * Input.GetAxis("Horizontal") * speed ));
     if (Input.GetKey(KeyCode.E))
@@ -49,6 +52,21 @@ void MomoPlayerMovement(){
     {
         rb.MovePosition(transform.position + Vector3.down * speed);
     }
+
+    float sensitivity = 0.01f;
+    Vector3 vp = camera.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camera.nearClipPlane));
+    vp.x -= 0.5f;
+    vp.y -= 0.5f;
+    vp.x *= sensitivity;
+    vp.y *= sensitivity;
+    vp.x += 0.5f;
+    vp.y += 0.5f;
+
+    Vector3 sp = camera.ViewportToScreenPoint(vp);
+
+    Vector3 v = camera.ScreenToWorldPoint(sp);
+    transform.LookAt(v, Vector3.up);
+
   }
 
 

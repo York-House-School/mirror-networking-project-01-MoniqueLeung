@@ -2024,7 +2024,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253676171}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e27364eefd6dd0341ba72a3bfc0d9727, type: 3}
   m_Name: 
@@ -2196,20 +2196,6 @@ MonoBehaviour:
   triggerAxisThreshold: 0.4
   invertYAxis: 0
   invertXAxis: 0
---- !u!114 &1253676183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253676171}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00abbde0e17b42519833b817870944b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
 --- !u!114 &1253676184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,19 +2210,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  rb: {fileID: 0}
-  anim: {fileID: 0}
-  controller: {fileID: 0}
-  camera: {fileID: 0}
-  speed: 0
-  turnspeed: 0
-  MouseSensitivity: 0
-  forward: 0
-  backwards: 0
-  right: 0
-  left: 0
-  up: 0
-  down: 0
+  rb: {fileID: 1253676172}
+  anim: {fileID: 1253676186}
+  controller: {fileID: 1253676185}
+  camera: {fileID: 1801031639}
+  speed: 4
+  turnspeed: 3
+  MouseSensitivity: 4
+  forward: 119
+  backwards: 115
+  right: 100
+  left: 97
+  up: 113
+  down: 101
 --- !u!143 &1253676185 stripped
 CharacterController:
   m_CorrespondingSourceObject: {fileID: 5503769265877271947, guid: 97d0aa4c60c7647f181c837a07815dab,
@@ -2558,7 +2544,7 @@ PrefabInstance:
     - target: {fileID: 4248784468015218630, guid: d3955771279de42289038fb2c2bcd0cf,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4248784468015218630, guid: d3955771279de42289038fb2c2bcd0cf,
         type: 3}
