@@ -1896,9 +1896,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &1253676173
 MonoBehaviour:
@@ -2196,6 +2196,28 @@ MonoBehaviour:
   triggerAxisThreshold: 0.4
   invertYAxis: 0
   invertXAxis: 0
+--- !u!114 &1253676183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253676171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d249c3a4c13f42aeb881b801d2cd8c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  walkingSpeed: 7.5
+  runningSpeed: 11.5
+  jumpSpeed: 8
+  gravity: 20
+  playerCamera: {fileID: 1801031639}
+  lookSpeed: 2
+  lookYLimit: 45
+  canMove: 1
 --- !u!114 &1253676184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2214,9 +2236,10 @@ MonoBehaviour:
   anim: {fileID: 1253676186}
   controller: {fileID: 1253676185}
   camera: {fileID: 1801031639}
-  speed: 4
+  speed: 10
   turnspeed: 3
   MouseSensitivity: 4
+  playerBody: {fileID: 1253676178}
   forward: 119
   backwards: 115
   right: 100
@@ -2235,6 +2258,27 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 282292849}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1253676187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253676171}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9c7955facc5e409c9d79f3cb1e00fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  speed: 1
+  turnSpeed: 1
+  left: 97
+  right: 100
+  forward: 119
+  back: 115
+  rb: {fileID: 1253676172}
 --- !u!1 &1315060444
 GameObject:
   m_ObjectHideFlags: 0
