@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 3729590517164015369}
+  - {fileID: 5503769266981192542}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -121,12 +122,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  speed: 10
-  turnSpeed: 150
-  left: 0
-  right: 0
-  forward: 0
-  rb: {fileID: 0}
+  anim: {fileID: 0}
+  controller: {fileID: 0}
+  playerCamera: {fileID: 0}
+  audioSource: {fileID: 0}
+  gravityDownForce: 20
+  groundCheckLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  groundCheckDistance: 0.05
+  maxSpeedOnGround: 10
+  movementSharpnessOnGround: 15
+  maxSpeedCrouchedRatio: 0.5
+  maxSpeedInAir: 10
+  accelerationSpeedInAir: 25
+  sprintSpeedModifier: 2
+  killHeight: -50
+  rotationSpeed: 200
+  aimingRotationMultiplier: 0.4
+  jumpForce: 9
+  cameraHeightRatio: 0.9
+  capsuleHeightStanding: 9.84
+  capsuleHeightCrouching: 8
+  crouchingSharpness: 10
+  footstepSFXFrequency: 1
+  footstepSFXFrequencyWhileSprinting: 1
+  footstepSFX: {fileID: 0}
+  jumpSFX: {fileID: 0}
+  landSFX: {fileID: 0}
+  fallDamageSFX: {fileID: 0}
+  recievesFallDamage: 0
+  minSpeedForFallDamage: 10
+  maxSpeedForFallDamage: 30
+  fallDamageAtMinSpeed: 10
+  fallDamageAtMaxSpeed: 50
 --- !u!1 &5503769266981192541
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,12 +183,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5503769266981192541}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.035790578, y: 0.2, z: -25.4}
-  m_LocalScale: {x: 7.1511316, y: 7.033798, z: 6.880251}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.010009766, y: 2.621235, z: -0.058135986}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
-  m_Father: {fileID: 9059554944443086639}
-  m_RootOrder: 0
+  m_Father: {fileID: 5470722916069843844}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5503769266981192530
 Camera:
@@ -219,7 +248,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5503769266981192541}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc3e9bd2af4844e4cb734482f04baa02, type: 3}
   m_Name: 
@@ -307,12 +336,6 @@ PrefabInstance:
 --- !u!4 &3729590517164015369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 463b26750bc154017a396f5ae9090860,
-    type: 3}
-  m_PrefabInstance: {fileID: 3767423463082727650}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &9059554944443086639 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5328482478806888397, guid: 463b26750bc154017a396f5ae9090860,
     type: 3}
   m_PrefabInstance: {fileID: 3767423463082727650}
   m_PrefabAsset: {fileID: 0}

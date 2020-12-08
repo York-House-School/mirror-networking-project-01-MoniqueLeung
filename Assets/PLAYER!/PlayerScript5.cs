@@ -34,7 +34,7 @@ public class PlayerScript5 : NetworkBehaviour
   //private Vector3 moveDirection = Vector3.zero;
 
   public KeyCode forward;
-  public KeyCode backwards;
+  public KeyCode back;
   public KeyCode right;
   public KeyCode left;
   public KeyCode up;
@@ -56,6 +56,28 @@ void MomoPlayerMovement()
 
   if(isLocalPlayer)
   {
+
+    if(Input.GetKey(left))
+  	{
+  		rb.MovePosition(transform.position + Vector3.left * speed);
+  	}
+
+  	if(Input.GetKey(right))
+  	{
+  		rb.MovePosition(transform.position + Vector3.right * speed);
+  	}
+
+  	if(Input.GetKey(forward))
+  	{
+  		rb.MovePosition(transform.position + Vector3.forward * speed );
+  	}
+
+  	if(Input.GetKey(back))
+  	{
+  rb.MovePosition(transform.position + Vector3.back * speed);
+  	}
+
+  }
     //rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse X") * MouseSensitivity, 0)));
     //rb.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * speed ) + (transform.right * Input.GetAxis("Horizontal") * speed ));
     //if (Input.GetKey(KeyCode.E))
@@ -81,32 +103,32 @@ void MomoPlayerMovement()
     //Vector3 v = camera.ScreenToWorldPoint(sp);
     //transform.LookAt(v, Vector3.up);
 
-    if (controller.isGrounded)
-        {
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            moveDirection *= walkSpeed;
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
+  //  if (controller.isGrounded)
+    //    {
+      //      moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //    moveDirection = transform.TransformDirection(moveDirection);
+          //  moveDirection *= walkSpeed;
+            //if (Input.GetButton("Jump"))
+              //  moveDirection.y = jumpSpeed;
+        //}
+        //moveDirection.y -= gravity * Time.deltaTime;
+        //controller.Move(moveDirection * Time.deltaTime);
 
 
 
 
-        float mouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
-    float mouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;
+//        float mouseX = Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
+  //  float mouseY = Input.GetAxis("Mouse Y") * MouseSensitivity * Time.deltaTime;
 
-    xRotation -= mouseY;
-    xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-    transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+    //xRotation -= mouseY;
+    //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+    //transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-    playerBody.Rotate(Vector3.up * mouseX);
+    //playerBody.Rotate(Vector3.up * mouseX);
 
 
 
-  }
+  //}
 
 
 

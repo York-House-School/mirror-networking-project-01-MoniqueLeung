@@ -28,7 +28,7 @@ public class FPSscript2 : NetworkBehaviour
     {
       characterController = GetComponent<CharacterController>();
 
-      // Lock cursor
+  //    Lock cursor
       Cursor.lockState = CursorLockMode.Locked;
       Cursor.visible = false;
     }
