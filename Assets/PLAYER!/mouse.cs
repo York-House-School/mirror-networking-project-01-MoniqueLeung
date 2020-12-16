@@ -1,8 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class mouse : MonoBehaviour
+//Script by Monique Leung November-December2020 for Computer Programming 12 G, Project Name = EXHILE
+
+
+public class mouse : NetworkBehaviour
 {
   public float mouseSensitivity;
   public float mouseX,mouseY;
@@ -16,19 +20,26 @@ public class mouse : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void MomoCameraMouseMovement()
     {
+      if(isLocalPlayer)
+            {
 
+              float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+                      float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
+                      xRotation -= mouseY;
+                      xRotation = Mathf.Clamp(xRotation, -150f, 150f);
+                      transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-      float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-              float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+                      playerBody.Rotate(Vector3.up * mouseX);
+            }
 
-              xRotation -= mouseY;
-              xRotation = Mathf.Clamp(xRotation, -150f, 150f);
-              transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+    }
 
-              playerBody.Rotate(Vector3.up * mouseX);
+    void Update()
 
+    {
+      MomoCameraMouseMovement();
     }
 }

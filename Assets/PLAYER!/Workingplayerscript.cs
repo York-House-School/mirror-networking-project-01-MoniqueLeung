@@ -6,7 +6,7 @@ using Mirror;
 
 public class Workingplayerscript : NetworkBehaviour {
 
-
+public Transform momotheplayer;
 		private Animator anim;
 		private CharacterController controller;
 		public Camera camera;
@@ -47,7 +47,8 @@ float xRotationV;
 		public Rigidbody rb;
 
 
-		void Start () {
+		void Start ()
+		{
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
 			camera = GetComponent<Camera>();
@@ -64,10 +65,72 @@ void MomoPlayerMovement(){
 //		anim.SetInteger ("Idle", 2);
 //	}
 
-if(isLocalPlayer)
-{
-//	rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse Y") * mouseSensitivity)));
-//	rb.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * speed ) + (transform.right * Input.GetAxis("Horizontal") * speed ));
+				if(isLocalPlayer)
+				{
+
+//define each momotheplayers for each form of movement, forward,back, right, left
+					if(Input.GetKey(left))
+					{
+							//rb.momotheplayer
+					}
+
+					if(Input.GetKey(right))
+					{
+						rb.MovePosition(transform.position + Vector3.right * speed);
+					}
+
+					if(Input.GetKey(forward))
+					{
+						rb.MovePosition(transform.position + Vector3.forward * speed );
+					}
+
+					if(Input.GetKey(back))
+					{
+					rb.MovePosition(transform.position + Vector3.back * speed);
+					}
+
+
+
+				//	float moveHorizontal = Input.GetAxis("Horizontal");
+				//	float moveVertical = Input.GetAxis("Vertical");
+				//	Vector3 movement = new Vector3(moveHorizontal*50.0f, moveVertical*50.0f,0);
+				//	momotheplayer.position = (transform.position + (transform.forward * Input.GetAxis("Vertical") * speed ) + (transform.right * Input.GetAxis("Horizontal") * speed ));
+
+				//	float moveHorizontal = Input.GetAxis("Horizontal");
+					//float moveVertical = Input.GetAxis("Vertical");
+					//Vector3 movement = new Vector3(moveHorizontal*100.0f, moveVertical*100.0f,0);
+				 //transform.position = transform.position + movement;
+
+
+					//	if(Input.GetKey(left))
+					//	{
+					//		transform.position = transform.position + movement + speed);
+					//	}
+
+						//if(Input.GetKey(right))
+						//{
+						//	transform.position = transform.position + movement + speed);
+						//}
+
+						//if(Input.GetKey(forward))
+						//{
+							//transform.position = transform.position + movement + speed );
+						//}
+
+						//if(Input.GetKey(back))
+						//{
+						//	transform.position = transform.position + movement + speed);
+						//}
+
+
+
+
+
+
+
+
+	//rb.MoveRotation(rb.rotation * Quaternion.Euler(new Vector3(0, Input.GetAxis("Mouse Y") * mouseSensitivity)));
+	//	rb.MovePosition(transform.position + (transform.forward * Input.GetAxis("Vertical") * speed ) + (transform.right * Input.GetAxis("Horizontal") * speed ));
 
 
 
@@ -80,14 +143,14 @@ if(isLocalPlayer)
 
 	       // transform.Rotate(Vector3.up * mouseX);
 
-					moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-					        moveDirection = transform.TransformDirection(moveDirection);
-					        moveDirection *= walkSpeed;
-					        if (Input.GetButton("Jump"))
-					            moveDirection.y = jumpSpeed;
-											moveDirection.y -= gravity * Time.deltaTime;
-						controller.Move(moveDirection * Time.deltaTime);
-}
+					//moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+					       // moveDirection = transform.TransformDirection(moveDirection);
+					      //  moveDirection *= walkSpeed;
+					     //   if (Input.GetButton("Jump"))
+					    //        moveDirection.y = jumpSpeed;
+						//					moveDirection.y -= gravity * Time.deltaTime;
+					//	controller.Move(moveDirection * Time.deltaTime);
+					}
 //	transform.Rotate(new Vector3(0f, (m_InputHandler.GetLookInputsHorizontal() * rotationSpeed * RotationMultiplier), 0f), Space.Self);
 //	m_CameraVerticalAngle += m_InputHandler.GetLookInputsVertical() * rotationSpeed * RotationMultiplier;
 //	m_CameraVerticalAngle = Mathf.Clamp(m_CameraVerticalAngle, -89f, 89f);
@@ -95,10 +158,10 @@ if(isLocalPlayer)
 
 
 
-	//rotationY += -Input.GetAxis("Mouse Y") * lookSpeed;
-//	rotationY = Mathf.Clamp(rotationY, -lookYLimit, lookYLimit);
-//	camera.transform.localRotation = Quaternion.Euler(rotationY, 0, 0);
-	//transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
+//rotationY += -Input.GetAxis("Mouse Y") * lookSpeed;
+	//rotationY = Mathf.Clamp(rotationY, -lookYLimit, lookYLimit);
+	//camera.transform.localRotation = Quaternion.Euler(rotationY, 0, 0);
+//transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
 
 
 //	Vector3 vp = camera.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, camera.nearClipPlane));
@@ -115,13 +178,17 @@ if(isLocalPlayer)
 	//transform.LookAt (v, Vector3.up);
 
 //	float turn = Input.GetAxis("Horizontal");
-	//transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+//	transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 //	rb.MovePosition(transform.position * turn);
 
 }
 
-void Update(){
-	MomoPlayerMovement();
-}
+
+
+void Update()
+
+		{
+			MomoPlayerMovement();
+		}
 
 }

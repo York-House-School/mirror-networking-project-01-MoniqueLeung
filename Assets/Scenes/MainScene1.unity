@@ -595,6 +595,11 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5503769265877271649, guid: 97d0aa4c60c7647f181c837a07815dab,
+        type: 3}
+      propertyPath: syncMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5503769265877271650, guid: 97d0aa4c60c7647f181c837a07815dab,
         type: 3}
       propertyPath: sceneId
@@ -1248,7 +1253,6 @@ GameObject:
   - component: {fileID: 417012011}
   - component: {fileID: 417012010}
   - component: {fileID: 417012015}
-  - component: {fileID: 417012014}
   m_Layer: 0
   m_Name: Network Manager
   m_TagString: Untagged
@@ -1333,7 +1337,7 @@ MonoBehaviour:
   offlineScene: 
   onlineScene: Assets/Scenes/MainScene1.unity
   transport: {fileID: 417012011}
-  networkAddress: localhost
+  networkAddress: momorepublic
   maxConnections: 4
   disconnectInactiveConnections: 0
   disconnectInactiveTimeout: 60
@@ -1356,22 +1360,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &417012014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417012009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f6f3bf89aa97405989c802ba270f815, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  animator: {fileID: 0}
 --- !u!114 &417012015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2259,15 +2247,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  momotheplayer: {fileID: 1253676178}
   camera: {fileID: 1801031639}
-  speed: 1
+  speed: 5
   turnSpeed: 1
   mouseSensitivity: 1
   lookSpeed: 1
   walkSpeed: 10
   jumpSpeed: 8
   runSpeed: 8
-  gravity: 1
+  gravity: 0.3
   left: 97
   right: 100
   forward: 119
@@ -2307,6 +2296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba93470497d454677bbf9acedacf6eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
   mouseSensitivity: 10
   mouseX: 45
   mouseY: 45
