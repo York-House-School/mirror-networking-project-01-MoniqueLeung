@@ -73,6 +73,20 @@ void MomoPlayerMovement(){
 					{
 							//rb.momotheplayer
 					}
+//Uncomment this later:
+// if(Inputer.GetKey(left))
+//      {
+//         momotheplayer = transform.position +
+//      }
+
+//Uncomment this later:
+// if(Inputer.GetKey(left))
+//      {
+//         rb.MovePosition(momotheplayer.position + Vector3.right * speed);
+//      }
+
+// momomovement = new Vector3(moveHorizontal*0.1f, moveVertical*0.1f,0);
+// 
 
 					if(Input.GetKey(right))
 					{
