@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Mirror;
 
 //Script by Monique Leung November-December2020 for Computer Programming 12 G Project Name = EXHILE
@@ -12,7 +11,7 @@ public class SpawnProjectile : NetworkBehaviour
   public List<GameObject> vfx = new List<GameObject> ();
 
   private GameObject effectToSpawn;
-  public KeyCode FIRE;
+  //public KeyCode FIRE;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,22 +21,22 @@ public class SpawnProjectile : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (isLocalPlayer)
-      {
+      //if(isLocalPlayer)
+    //  {
         if(Input.GetMouseButton(0))
         {
-          SpawnVFX ();
+          SpawnVFX();
         }
-      }
+    //  }
 
     }
 
-    void SpawnVFX ()
+    void SpawnVFX()
     {
       GameObject vfx;
 
 
-      if (firepoint != null)
+      if(firepoint != null)
       {
           vfx = Instantiate (effectToSpawn, firepoint.transform.position, Quaternion.identity);
       }
