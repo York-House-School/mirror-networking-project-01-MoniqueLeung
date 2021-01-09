@@ -1,4 +1,6 @@
 using UnityEngine;
+using Mirror;
+using UnityEngine.Networking;
 using UnityEngine.AI;
 
 namespace Mirror.Examples.Tanks
@@ -40,7 +42,7 @@ namespace Mirror.Examples.Tanks
                 nameText.text = playerName;
                 nameText.transform.rotation = Camera.main.transform.rotation;
             }
-            
+
             // movement for local player
             if (!isLocalPlayer)
                 return;

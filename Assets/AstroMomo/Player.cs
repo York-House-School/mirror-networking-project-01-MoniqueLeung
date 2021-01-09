@@ -6,6 +6,7 @@ using Mirror;
 
 public class Player : NetworkBehaviour {
 
+		
 		private Animator anim;
 		private CharacterController controller;
 
@@ -14,19 +15,31 @@ public class Player : NetworkBehaviour {
 		private Vector3 moveDirection = Vector3.zero;
 		public float gravity = 20.0f;
 
+		//public Vector3 jump;
+	//	public float jumpForce;
+//		public bool isGrounded;
+//		public Rigidbody rb;
+
 		void Start () {
 			controller = GetComponent <CharacterController>();
 			anim = gameObject.GetComponentInChildren<Animator>();
+
+		//	rb = GetComponent<Rigidbody>();
+
 		}
 
 		void Update (){
-			if (Input.GetKey ("w")) {
+			if (Input.GetKey ("w"))
+			{
 				anim.SetInteger ("AnimationPar", 1);
-			}  else {
+			}
+			else
+			{
 				anim.SetInteger ("AnimationPar", 0);
 			}
 
-			if(controller.isGrounded){
+			if(controller.isGrounded)
+			{
 				moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
 			}
 
@@ -34,5 +47,10 @@ public class Player : NetworkBehaviour {
 			transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 			controller.Move(moveDirection * Time.deltaTime);
 			moveDirection.y -= gravity * Time.deltaTime;
+
+
+
+
+
 		}
 }
