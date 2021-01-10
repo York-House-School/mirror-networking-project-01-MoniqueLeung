@@ -118,7 +118,7 @@ namespace AstroMomo
         int alivePlayerCount = 0;
         foreach (Astroboii astroboii in players)
         {
-          if (!tank.isDead)
+          if (!astroboii.isDead)
           {
             alivePlayerCount++;
             //if there is only one player left than their name will be displayed as the winner
