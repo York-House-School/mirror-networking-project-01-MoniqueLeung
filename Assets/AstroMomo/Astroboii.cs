@@ -48,7 +48,7 @@ namespace AstroMomo
     {
       controller = GetComponent <CharacterController>();
 
-      
+
     }
 
     void Update()

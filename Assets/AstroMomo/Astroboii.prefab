@@ -937,7 +937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7654825965181360931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -683.1022, y: 27.78, z: -573.8413}
+  m_LocalPosition: {x: -212.76141, y: 279.24002, z: -217.16507}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7651281998523903769}
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   animator: {fileID: 7741058371347813591}
   rotationSpeed: 80
   speed: 10
-  gravity: 20
+  gravity: 1
   shootKey: 32
   projectilePrefab: {fileID: 886190702765507032, guid: b8daf4c8e627349e38f61df5b4f49f57,
     type: 3}
