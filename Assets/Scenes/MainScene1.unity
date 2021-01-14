@@ -1436,7 +1436,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259831157}
-  m_LocalRotation: {x: -0.20913348, y: -0, z: -0, w: 0.9778871}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -210.9414, y: 29.059423, z: -385.2528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1452,7 +1452,7 @@ Transform:
   - {fileID: 537325296}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -24.143002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &261969443
 GameObject:
   m_ObjectHideFlags: 0
@@ -7328,16 +7328,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735076216}
-  m_LocalRotation: {x: -0.08913867, y: -0, z: -0, w: 0.99601924}
-  m_LocalPosition: {x: 0, y: 0.18057632, z: 22.912811}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalRotation: {x: -0.17364825, y: 0, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 0.4076, y: 0.465, z: 23.697}
+  m_LocalScale: {x: 2.8151717, y: 0.99999994, z: 2.5615017}
   m_Children:
   - {fileID: 193784055}
   - {fileID: 1124709177}
   - {fileID: 1341435489}
   m_Father: {fileID: 259831158}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: -10.228001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -20, y: 0, z: 0}
 --- !u!114 &1735076221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8046,8 +8046,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878699037}
+  - component: {fileID: 1878699039}
+  - component: {fileID: 1878699038}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: T1-Landing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8069,6 +8071,39 @@ Transform:
   m_Father: {fileID: 684216356}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878699038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878699036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d25cadb493340b89c6dfc8afe07355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  teleportTarget: {fileID: 1878699037}
+  astroboiiPlayer: {fileID: 7654825965181360931, guid: e2b0ec2d18f31490fb125eed5f08ce51,
+    type: 3}
+--- !u!114 &1878699039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878699036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3883493447
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1878714332
 GameObject:
   m_ObjectHideFlags: 0
