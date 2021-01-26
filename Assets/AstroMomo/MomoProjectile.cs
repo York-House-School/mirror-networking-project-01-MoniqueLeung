@@ -18,6 +18,7 @@ namespace AstroMomo
     public int damage;
     public GameObject source;
 
+
     public override void OnStartServer()
     {
         Invoke(nameof(DestroySelf), destroyAfter);
@@ -49,6 +50,11 @@ namespace AstroMomo
         {
             //Apply damage
             co.GetComponent<Astroboii>().health -= damage;
+            Debug.Log("Player Hit");
+            //lwoer case is instaance and upper case is declarationuse class declartion to find the instaance
+            //public Player player;
+            //defining class use capital letter first if you're creating a property inside your case then use the lower case, use this for better organization
+            //basically the moral of the story, when naming your classes, use uppercase, if making rioerties than uselowercase
 
             //update score on source
             source.GetComponent<Astroboii>().score += damage;
