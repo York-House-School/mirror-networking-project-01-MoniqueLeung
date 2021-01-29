@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using Mirror;
-
+//script by Monique Leung November-January 2021 for the Computer Programming 12 G Project Name = EXHILE
 namespace AstroMomo
 {
   public class CameraScript : MonoBehaviour
@@ -23,6 +23,7 @@ namespace AstroMomo
       // Start is called before the first frame update
       private void Start()
       {
+
           camTransform = transform;
       }
       // Update is called once per frame
@@ -35,6 +36,7 @@ namespace AstroMomo
       }
       private void LateUpdate()
       {
+        
         Vector3 dir = new Vector3(0, 0, -distance);
         Quaternion rotation = Quaternion.Euler(currentY, currentX, 0);
         camTransform.position = lookAt.position + rotation * dir;

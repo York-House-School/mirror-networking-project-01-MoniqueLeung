@@ -17,16 +17,17 @@ namespace AstroMomo
     public float rotationSpeed = 100;
     public float speed;
     //public float turnSpeed;
+    //gravity is the variable that I have added to mimic real life movement
     public float gravity;
-
     private Vector3 moveDirection = Vector3.zero;
     private CharacterController controller;
 
+    //these are the variables that are needed for shooting
     [Header("Firing")]
     public KeyCode shootKey = KeyCode.Space;
     public GameObject projectilePrefab;
     public Transform projectileMount;
-
+    //These syncvar attributes are part of the networking feature of unity that sync all the statistics across the network
     [Header("Game Stats")]
     [SyncVar]
     public int health;
@@ -38,19 +39,14 @@ namespace AstroMomo
     public bool allowMovement;
     [SyncVar]
     public bool isReady;
-
     public bool isDead => health <= 0;
     public TextMesh nameText;
 
-
-
     void Start ()
     {
+      //the moment start is called the game will find the CharacterController from the game.
       controller = GetComponent <CharacterController>();
-
-
     }
-
     void Update()
     {
       if(Camera.main)
@@ -59,9 +55,6 @@ namespace AstroMomo
           nameText.transform.rotation = Camera.main.transform.rotation;
 
       }
-
-
-
       // movement for local player
       if (!isLocalPlayer)
           return;
@@ -74,18 +67,15 @@ namespace AstroMomo
 
       if (isDead)
           return;
-
       // rotatation from the tank script
       float horizontal = Input.GetAxis("Horizontal");
       transform.Rotate(0, horizontal * rotationSpeed * Time.deltaTime, 0);
-
       // movement from the tank script
       if (Input.GetKey ("w"))
       {
         //float vertical = Input.GetAxis("Vertical");
         //Vector3 forward = transform.TransformDirection(Vector3.forward);
         //agent.velocity = forward * Mathf.Max(vertical, 0) * agent.speed;
-
         moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
         float turn = Input.GetAxis("Horizontal");
         transform.Rotate(0, turn * rotationSpeed * Time.deltaTime, 0);
@@ -97,7 +87,6 @@ namespace AstroMomo
       {
         animator.SetInteger ("AnimationPar", 0);
       }
-
       //movement from astronaut prefab player script
       //if (Input.GetKey ("w"))
       //{
@@ -107,8 +96,6 @@ namespace AstroMomo
       //{
 			//	animator.SetInteger ("AnimationPar", 0);
 			//}
-
-
 		  //	if(controller.isGrounded)
       //  {
 		  //		moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
@@ -117,41 +104,35 @@ namespace AstroMomo
 			//transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 			//controller.Move(moveDirection * Time.deltaTime);
 			//moveDirection.y -= gravity * Time.deltaTime;
-
       // shoot
       if (Input.GetKeyDown(shootKey))
       {
           CmdFire();
       }
     }
-
-
-
     //called on the server
     [Command]
     void CmdFire()
     {
+        //the momoprojectile are the projectiles that the players shoot out when they hit the space bar
         GameObject momoprojectile = Instantiate(projectilePrefab, projectileMount.position, transform.rotation);
         momoprojectile.GetComponent<MomoProjectile>().source = gameObject;
         NetworkServer.Spawn(momoprojectile);
         RpcOnFire();
     }
-
     // this is called on the player that fired for all observers
     [ClientRpc]
     void RpcOnFire()
     {
+        //on the trigger shoot, which is space in my case the animation will run for the projectile.
         animator.SetTrigger("Shoot");
     }
-
     public void SendReadyToServer(string playername)
     {
         if (!isLocalPlayer)
             return;
-
         CmdReady(playername);
     }
-
     [Command]
     void CmdReady(string playername)
     {
@@ -163,7 +144,6 @@ namespace AstroMomo
         {
             playerName = playername;
         }
-
         isReady = true;
     }
   //last bracket for public class
