@@ -22,6 +22,7 @@ namespace AstroMomo
       //the collider of the teleportation platform than this void will run instantly.
       void OnTriggerEnter(Collider Col)
       {
+        //bug here, the player just gets yeeted into outer space bruv
         Col.transform.position = new Vector3((10.0f), Col.transform.position.y,(10.0f));
       }
       //this line transforms the players position to another random location
