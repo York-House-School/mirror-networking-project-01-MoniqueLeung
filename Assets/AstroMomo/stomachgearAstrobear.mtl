@@ -1,0 +1,19 @@
+newmtl Silver Glossy 5
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm stomachgearAstrobear/Silver Glossy 5_metallic.png
+adobe_translucence 0
+map_Pr stomachgearAstrobear/Silver Glossy 5_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd stomachgearAstrobear/Silver Glossy 5_baseColor.png
+norm stomachgearAstrobear/Silver Glossy 5_normal.png
+disp stomachgearAstrobear/Silver Glossy 5_height.png

@@ -1,0 +1,150 @@
+newmtl Glowing
+illum 7
+Kd 0.909804 0.992157 1
+adobe_interior_color 1 1 1
+Ni 1.5
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 1
+Ns 16
+Ks 1 1 1
+adobe_glow 5
+
+newmtl Silver Glossy 5
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm astrobear1/Silver Glossy 5_metallic.png
+adobe_translucence 0
+map_Pr astrobear1/Silver Glossy 5_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd astrobear1/Silver Glossy 5_baseColor.png
+norm astrobear1/Silver Glossy 5_normal.png
+disp astrobear1/Silver Glossy 5_height.png
+
+newmtl Silver Glossy 3
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm astrobear1/Silver Glossy 3_metallic.png
+adobe_translucence 0
+map_Pr astrobear1/Silver Glossy 3_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd astrobear1/Silver Glossy 3_baseColor.png
+norm astrobear1/Silver Glossy 3_normal.png
+disp astrobear1/Silver Glossy 3_height.png
+
+newmtl Silver Glossy 3 2
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm astrobear1/Silver Glossy 3_metallic 2.png
+adobe_translucence 0
+map_Pr astrobear1/Silver Glossy 3_roughness 2.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd astrobear1/Silver Glossy 3_baseColor 2.png
+norm astrobear1/Silver Glossy 3_normal 2.png
+disp astrobear1/Silver Glossy 3_height 2.png
+
+newmtl Silver Glossy 2
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm astrobear1/Silver Glossy 2_metallic.png
+adobe_translucence 0
+map_Pr astrobear1/Silver Glossy 2_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd astrobear1/Silver Glossy 2_baseColor.png
+norm astrobear1/Silver Glossy 2_normal.png
+disp astrobear1/Silver Glossy 2_height.png
+
+newmtl Player_Helm
+illum 7
+Kd 1 0.912664 0
+adobe_interior_color 0 0 0
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.546119
+Ns 16
+Ks 1 1 1
+adobe_glow 0.284081
+
+newmtl Player_Grey
+illum 7
+Kd 0.26653 0.284791 0.20792
+adobe_interior_color 0 0 0
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+Pm 0
+adobe_translucence 0
+Pr 0.415087
+Ns 16
+Ks 1 1 1
+adobe_glow 0.0165036
+
+newmtl Silver Glossy
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm astrobear1/Silver Glossy_metallic.png
+adobe_translucence 0
+map_Pr astrobear1/Silver Glossy_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd astrobear1/Silver Glossy_baseColor.png
+norm astrobear1/Silver Glossy_normal.png
+disp astrobear1/Silver Glossy_height.png

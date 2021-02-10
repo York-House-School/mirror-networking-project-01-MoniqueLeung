@@ -1,0 +1,59 @@
+newmtl Silver Glossy 2
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm gearAstroBear/Silver Glossy 2_metallic.png
+adobe_translucence 0
+map_Pr gearAstroBear/Silver Glossy 2_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd gearAstroBear/Silver Glossy 2_baseColor.png
+norm gearAstroBear/Silver Glossy 2_normal.png
+disp gearAstroBear/Silver Glossy 2_height.png
+
+newmtl Silver Glossy 3
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm gearAstroBear/Silver Glossy 3_metallic.png
+adobe_translucence 0
+map_Pr gearAstroBear/Silver Glossy 3_roughness.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd gearAstroBear/Silver Glossy 3_baseColor.png
+norm gearAstroBear/Silver Glossy 3_normal.png
+disp gearAstroBear/Silver Glossy 3_height.png
+
+newmtl Silver Glossy 3 2
+illum 7
+Kd 0 0 0
+adobe_interior_color 1 1 1
+Ni 1.6
+adobe_density 0
+Tr 0
+d 1
+Ka 0 0 0
+Ke 0 0 0
+map_Pm gearAstroBear/Silver Glossy 3_metallic 2.png
+adobe_translucence 0
+map_Pr gearAstroBear/Silver Glossy 3_roughness 2.png
+Ns 16
+Ks 1 1 1
+adobe_glow 0
+map_Kd gearAstroBear/Silver Glossy 3_baseColor 2.png
+norm gearAstroBear/Silver Glossy 3_normal 2.png
+disp gearAstroBear/Silver Glossy 3_height 2.png
