@@ -5,8 +5,11 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using Mirror;
 
+//Script by Monique Leung November-January2020 for Computer Programming 12 G Project Name = EXHILE
+
 public class StartGameButton : MonoBehaviour
 {
+    public GameObject MainMenuPanelButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +24,7 @@ public class StartGameButton : MonoBehaviour
     public void StartGameSceneButton()
     {
         SceneManager.LoadScene ("GameScene");
+        MainMenuPanelButton.SetActive(false);
+
     }
 }
