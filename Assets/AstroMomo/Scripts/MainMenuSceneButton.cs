@@ -8,6 +8,7 @@ using Mirror;
 
 public class MainMenuSceneButton : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,9 @@ public class MainMenuSceneButton : MonoBehaviour
 
     public void MainMenuButton()
     {
+        
+        NetworkManager.singleton.StopClient();
         SceneManager.LoadScene ("MainMenu");
+        
     }   
 }

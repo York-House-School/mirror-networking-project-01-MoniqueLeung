@@ -16,6 +16,8 @@ namespace AstroMomo
       public Astroboii LocalPlayer;
       public GameObject StartPanel;
       public GameObject GameOverPanel;
+      public GameObject LosePanel;
+      public GameObject WinPanel;
       public GameObject HealthTextLabel;
       public GameObject ScoreTextLabel;
       public Text HealthText;
@@ -123,15 +125,21 @@ namespace AstroMomo
             alivePlayerCount++;
             //if there is only one player left than their name will be displayed as the winner
             WinnerNameText.text = astroboii.playerName;
+
           }
+
+          
         }
 
-        if (alivePlayerCount ==1)
+        if (alivePlayerCount == 1)
         {
             IsGameOver = true;
-            GameOverPanel.SetActive(true);
+            //GameOverPanel.SetActive(true);
             DisallowAstroboiiMovement();
+            WinPanel.SetActive(true);
+            //LosePanel.SetActive(true);
         }
+
       }
 
       void FindLocalAstroboii()

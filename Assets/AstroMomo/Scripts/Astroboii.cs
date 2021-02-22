@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Mirror;
 using UnityEngine.Networking;
 
@@ -41,23 +42,44 @@ namespace AstroMomo
     public bool isReady;
     public bool isDead => health <= 0;
     public TextMesh nameText;
-
+    //ThirdPersonCamera cam;
+    public Transform astroMove;
+    
+    //UI
+   
+ 
     void Start ()
     {
       //the moment start is called the game will find the CharacterController from the game.
       controller = GetComponent <CharacterController>();
+      //Camera.main.GetComponent<CameraFollow>();
+      //Camera.main.GetComponent<CameraFollow>().setTarget(gameObject.transform);
+      //cam = GameObject.Find("Camera").GetComponent<ThirdPersonCamera>();
+      //cam.lookAt = transform;
+
+      if (isLocalPlayer)
+      {
+        Camera.main.transform.position = this.transform.position - this.transform.forward*9 + this.transform.up*5;
+        Camera.main.transform.LookAt(this.transform.position);
+        Camera.main.transform.parent = this.transform;
+      }
     }
+
     void Update()
     {
-      if(Camera.main)
+      if(isLocalPlayer)
       {
           nameText.text = playerName;
-          nameText.transform.rotation = Camera.main.transform.rotation;
-
+          //Camera.main.GetComponent<CameraFollow>().enabled = true;
+          //nameText.transform.rotation = Camera.main.transform.rotation;
+          
       }
       // movement for local player
       if (!isLocalPlayer)
+      {
           return;
+      }
+          
 
       //Set local players name color to green
       nameText.color = Color.green;
@@ -65,8 +87,7 @@ namespace AstroMomo
       if (!allowMovement)
           return;
 
-      if (isDead)
-          return;
+          
       // rotatation from the tank script
       float horizontal = Input.GetAxis("Horizontal");
       transform.Rotate(0, horizontal * rotationSpeed * Time.deltaTime, 0);
@@ -146,6 +167,7 @@ namespace AstroMomo
         }
         isReady = true;
     }
+
   //last bracket for public class
   }
 //last bracket for namespace
