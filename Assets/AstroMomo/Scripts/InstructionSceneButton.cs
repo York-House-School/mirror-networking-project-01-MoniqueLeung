@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Mirror;
 //Script by Monique Leung November-January2020 for Computer Programming 12 G Project Name = EXHILE
@@ -23,5 +24,6 @@ public class InstructionSceneButton : MonoBehaviour
     public void onClickinstruction()
     {
        InstructionPanel.SetActive(true);
+       Debug.Log("ChangeScenes");
     }
 }
