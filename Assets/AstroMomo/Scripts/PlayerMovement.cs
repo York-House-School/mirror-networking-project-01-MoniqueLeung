@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 //Script by Monique Leung November-January2020 for Computer Programming 12 G Project Name = EXHILE
 namespace AstroMomo
 {
-  public class Astroboii : NetworkBehaviour
+  public class PlayerMovement : NetworkBehaviour
   {
     [Header("Components")]
     public UnityEngine.AI.NavMeshAgent agent;
